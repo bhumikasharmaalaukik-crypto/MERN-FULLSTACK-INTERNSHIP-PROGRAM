@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in</title>
+  <link rel="stylesheet" href="Navigation.css">
+</head>
+<body>
+  <main class="auth-card">
+
+    <!-- Navigation: real links with hash URLs, so Back/Forward and bookmarks work -->
+    <nav class="auth-nav" aria-label="Account">
+      <a href="#login" data-nav="login">Log in</a>
+      <a href="#register" data-nav="register">Register</a>
+    </nav>
+
+    <!--  LOGIN VIEW  -->
+    <section id="view-login" class="view" data-title="Log in" aria-labelledby="login-heading">
+      <h1 id="login-heading" tabindex="-1">Welcome back</h1>
+      <p class="subtitle">Log in to continue.</p>
+
+      <form data-form="login" novalidate>
+        <fieldset>
+          <legend>Your account</legend>
+
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" required
+                   autocomplete="email" aria-describedby="login-email-error" aria-invalid="false">
+            <p id="login-email-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" required
+                   autocomplete="current-password" aria-describedby="login-password-error" aria-invalid="false">
+            <p id="login-password-error" class="error" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Log in</button>
+        <p class="success" role="status" hidden></p>
+      </form>
+
+      <p class="switch-page">New here? <a href="#register" data-nav="register">Create an account</a></p>
+    </section>
+
+    <!--  REGISTER VIEW -->
+    <section id="view-register" class="view" data-title="Create account" aria-labelledby="register-heading" hidden>
+      <h1 id="register-heading" tabindex="-1">Create your account</h1>
+      <p class="subtitle">It takes less than a minute.</p>
+
+      <form data-form="register" novalidate>
+        <fieldset>
+          <legend>Your details</legend>
+
+          <div class="field">
+            <label for="reg-name">Full name</label>
+            <input id="reg-name" name="name" type="text" required minlength="2"
+                   autocomplete="name" aria-describedby="reg-name-error" aria-invalid="false">
+            <p id="reg-name-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="reg-email">Email</label>
+            <input id="reg-email" name="email" type="email" required
+                   autocomplete="email" aria-describedby="reg-email-error" aria-invalid="false">
+            <p id="reg-email-error" class="error" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Set a password</legend>
+
+          <div class="field">
+            <label for="reg-password">Password</label>
+            <small id="reg-password-hint" class="hint">At least 8 characters.</small>
+            <input id="reg-password" name="password" type="password" required minlength="8"
+                   autocomplete="new-password" aria-describedby="reg-password-hint reg-password-error" aria-invalid="false">
+            <p id="reg-password-error" class="error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="reg-confirm">Confirm password</label>
+            <input id="reg-confirm" name="confirm" type="password" required
+                   autocomplete="new-password" aria-describedby="reg-confirm-error" aria-invalid="false">
+            <p id="reg-confirm-error" class="error" aria-live="polite"></p>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Create account</button>
+        <p class="success" role="status" hidden></p>
+      </form>
+
+      <p class="switch-page">Already have an account? <a href="#login" data-nav="login">Log in</a></p>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+  
+
+  
+</body>
+</html>
+
+
+
+
