@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="TaskCreationModal.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <h2 class="logo">TaskApp</h2>
+
+      <ul class="menu">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#" class="active">Tasks</a></li>
+      </ul>
+
+      <a href="#" class="logout">Logout</a>
+    </div>
+
+    <!-- main content -->
+    <div class="main">
+
+      <div class="top-bar">
+        <div>
+          <h1>My Tasks</h1>
+          <p id="task-count">You have 6 tasks</p>
+        </div>
+        <button class="add-btn" id="add-task-btn">+ Add Task</button>
+      </div>
+
+      <div class="task-list" id="task-list">
+
+        <div class="task">
+          <div class="task-header">
+            <h3>Design login page</h3>
+            <span class="status completed">Completed</span>
+          </div>
+          <p>Create the login and registration layout.</p>
+        </div>
+
+        <div class="task">
+          <div class="task-header">
+            <h3>Add form validation</h3>
+            <span class="status completed">Completed</span>
+          </div>
+          <p>Check email format, password length and confirm password.</p>
+        </div>
+
+        <div class="task">
+          <div class="task-header">
+            <h3>Build dashboard</h3>
+            <span class="status completed">Completed</span>
+          </div>
+          <p>Sidebar, welcome section and statistics cards.</p>
+        </div>
+
+        <div class="task">
+          <div class="task-header">
+            <h3>Create task list</h3>
+            <span class="status pending">Pending</span>
+          </div>
+          <p>Show tasks as cards with title, description and status.</p>
+        </div>
+
+        <div class="task">
+          <div class="task-header">
+            <h3>Connect to backend</h3>
+            <span class="status pending">Pending</span>
+          </div>
+          <p>Load the tasks from the server instead of static data.</p>
+        </div>
+
+        <div class="task">
+          <div class="task-header">
+            <h3>Write documentation</h3>
+            <span class="status pending">Pending</span>
+          </div>
+          <p>Explain the setup steps and the folder structure.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- add task modal -->
+  <div class="overlay" id="overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+
+      <h2 id="modal-title">Add New Task</h2>
+
+      <form id="task-form" novalidate>
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Enter task title">
+        <p class="error" id="title-error"></p>
+
+        <label for="description">Description</label>
+        <textarea id="description" rows="4" placeholder="Enter task description"></textarea>
+
+        <div class="modal-buttons">
+          <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
+          <button type="submit" class="save-btn">Save</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="TaskCreationModal.js"></script>
+</body>
+</html>
